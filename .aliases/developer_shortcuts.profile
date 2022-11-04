@@ -35,3 +35,7 @@ gitdifflines() {
     # 31 files changed, 1129 insertions(+), 223 deletions(-)
     git diff --stat $1 $2 | tail -n1
 }
+
+prop_to_env() {
+    echo ${1/./_} | tr '[:lower:]' '[:upper:]'
+}
