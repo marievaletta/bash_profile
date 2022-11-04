@@ -37,5 +37,5 @@ gitdifflines() {
 }
 
 prop_to_env() {
-    echo ${1/./_} | tr '[:lower:]' '[:upper:]'
+    echo ${1//./_} | tr '[:lower:]' '[:upper:]'
 }
