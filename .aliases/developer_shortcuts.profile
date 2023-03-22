@@ -1,3 +1,7 @@
+# PNPM
+alias p="pnpm"
+alias px="pnpm dlx"
+
 # App dev
 alias expobuild="echo 'Did you remember to update version and versionCode in app.json?' && read && expo build:ios && expo build:android"
 
@@ -38,4 +42,14 @@ gitdifflines() {
 
 prop_to_env() {
     echo ${1//[.-]/_} | tr '[:lower:]' '[:upper:]'
+}
+
+git_delete_tags() {
+    tags=$(git ls-remote --tags origin | grep "$1" | cut -f 2)
+    
+    echo "TAGS TO DELETE:\n$tags"
+    echo -n "Press [Enter] to perform delete:"
+    read
+    
+    git push origin --delete $tags
 }
