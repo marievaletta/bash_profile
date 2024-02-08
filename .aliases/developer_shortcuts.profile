@@ -2,6 +2,9 @@
 alias p="pnpm"
 alias px="pnpm dlx"
 
+# Maven
+alias mci="mvn clean install"
+
 # App dev
 alias expobuild="echo 'Did you remember to update version and versionCode in app.json?' && read && expo build:ios && expo build:android"
 

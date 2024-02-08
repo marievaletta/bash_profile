@@ -19,5 +19,5 @@ realpath() {
 greps() {
 	[ $# -lt 2 ] && echo "Usage: greps <string> <location>" && return
 	echo ">> Searching for '$1' in '$2'"
-	grep -RIn $1 $2
+	grep -RIn --exclude-dir={node_modules,target,dist,build} $1 $2
 }
