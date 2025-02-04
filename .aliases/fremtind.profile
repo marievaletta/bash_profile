@@ -35,6 +35,7 @@ function awsenv() {
     echo "bsf-innsikt" > ~/.aws.current
   elif [[ "$awsenv" = "clean" ]]; then
     rm -rf ~/.aws
+    echo "none" > ~/.aws.current
   else
     echo "Current AWS env: $current_aws"
   fi
