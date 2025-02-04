@@ -1,13 +1,14 @@
 alias st="git status"
 #alias cmt="git commit -am"
 alias gp="git pull"
-alias gamend="git commit --amend"
+alias gamend="git commit --no-verify --amend"
 alias gitignore="echo .DS_Store > .gitignore"
 alias gitrevert_force_hard="git clean --force && git reset --hard"
 alias gremotes="git remote -v"
 alias gitreset="git checkout HEAD --"
 alias gch="git checkout"
 alias gpush="git push -u origin HEAD"
+alias gs="git stash"
 
 function gchd() {
     git checkout $(git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@') && git pull && git cleanup
